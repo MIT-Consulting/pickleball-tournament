@@ -1,0 +1,59 @@
+.bracket {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 200px;
+}
+
+.match {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.team {
+    padding: 5px;
+    margin: 2px 0;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.team:hover {
+    background-color: #e9ecef;
+}
+
+.team.winner {
+    background-color: #d4edda;
+}
+
+.team.loser {
+    background-color: #f8d7da;
+}
+
+.brackets-container {
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.match-connector {
+    border-right: 2px solid #ccc;
+    height: 50%;
+    position: absolute;
+    right: -20px;
+    width: 20px;
+}
+
+#teams-list {
+    max-height: 300px;
+    overflow-y: auto;
+} 
