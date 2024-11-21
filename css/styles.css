@@ -167,6 +167,7 @@ body {
     background-color: var(--match-bg);
     border-color: var(--border-color);
     color: var(--text-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
 }
 
 [data-theme="dark"] .btn-primary {
@@ -182,4 +183,28 @@ body {
 [data-theme="dark"] .btn-danger {
     background-color: #dc3545;
     border-color: #b02a37;
+}
+
+/* Dark mode list group items */
+[data-theme="dark"] .list-group-item {
+    background-color: var(--match-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+/* Dark mode buttons */
+[data-theme="dark"] .btn-outline-primary {
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+/* Dark mode sidebar */
+[data-theme="dark"] .sidebar {
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
 } 
