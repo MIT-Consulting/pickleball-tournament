@@ -12,9 +12,9 @@
         <h1 class="text-center my-4">Miller Family Pickleball Tournament</h1>
         
         <div class="row">
-            <!-- Team Management Section -->
-            <div class="col-md-3">
-                <div id="registration-section" class="mb-4">
+            <!-- Left sidebar with registration -->
+            <div class="col-md-3 sidebar">
+                <div id="registration-section">
                     <h2>Register Teams</h2>
                     <form id="team-form">
                         <div class="mb-3">
@@ -29,7 +29,7 @@
                         <button type="submit" class="btn btn-primary">Add Team</button>
                     </form>
 
-                    <div class="mt-4">
+                    <div class="mt-4 teams-container">
                         <h3>Registered Teams</h3>
                         <ul id="teams-list" class="list-group"></ul>
                         <button id="start-tournament" class="btn btn-success mt-3" disabled>Start Tournament</button>
@@ -37,8 +37,8 @@
                 </div>
             </div>
 
-            <!-- Tournament Bracket -->
-            <div class="col-md-9">
+            <!-- Main content area with brackets -->
+            <div class="col-md-9 main-content">
                 <div id="bracket-section">
                     <h2>Tournament Bracket</h2>
                     <div class="brackets-container">

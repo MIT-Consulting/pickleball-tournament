@@ -43,6 +43,7 @@
 .brackets-container {
     overflow-x: auto;
     padding-bottom: 20px;
+    margin-top: 20px;
 }
 
 .match-connector {
@@ -63,4 +64,36 @@
 .sortable-ghost {
     opacity: 0.4;
     background-color: #c8ebfb;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+}
+
+.main-content {
+    margin-left: 25%;
+    padding: 20px;
+}
+
+.teams-container {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
 } 
