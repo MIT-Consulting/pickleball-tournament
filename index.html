@@ -6,10 +6,16 @@
     <title>Miller Family Pickleball Tournament</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="container-fluid">
         <h1 class="text-center my-4">Miller Family Pickleball Tournament</h1>
+        <div class="theme-toggle position-absolute top-0 end-0 m-3">
+            <button id="theme-toggle" class="btn btn-outline-primary">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
         
         <div class="row">
             <!-- Left sidebar with registration -->
@@ -53,5 +59,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
     <script src="js/teams.js"></script>
     <script src="js/bracket.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html> 

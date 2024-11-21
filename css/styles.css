@@ -1,3 +1,58 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --sidebar-bg: #f8f9fa;
+    --match-bg: #f8f9fa;
+    --team-hover: #e9ecef;
+    --border-color: #dee2e6;
+    --winner-bg: #d4edda;
+    --loser-bg: #f8d7da;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --sidebar-bg: #2d2d2d;
+    --match-bg: #333333;
+    --team-hover: #404040;
+    --border-color: #404040;
+    --winner-bg: #1e4a2e;
+    --loser-bg: #4a1e1e;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+    border-right-color: var(--border-color);
+}
+
+.match {
+    background-color: var(--match-bg);
+    border-color: var(--border-color);
+}
+
+.team:hover {
+    background-color: var(--team-hover);
+}
+
+.team.winner {
+    background-color: var(--winner-bg);
+}
+
+.team.loser {
+    background-color: var(--loser-bg);
+}
+
+.list-group-item {
+    background-color: var(--match-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
 .bracket {
     display: flex;
     flex-direction: row;
