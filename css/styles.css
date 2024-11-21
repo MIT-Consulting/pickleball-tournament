@@ -31,8 +31,11 @@ body {
 }
 
 .match {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
     background-color: var(--match-bg);
-    border-color: var(--border-color);
 }
 
 .team:hover {
@@ -151,4 +154,32 @@ body {
     .main-content {
         margin-left: 0;
     }
+} 
+
+/* Add dark mode styles for form elements */
+[data-theme="dark"] .form-control {
+    background-color: var(--match-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .form-control:focus {
+    background-color: var(--match-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0a58ca;
+}
+
+[data-theme="dark"] .btn-success {
+    background-color: #198754;
+    border-color: #146c43;
+}
+
+[data-theme="dark"] .btn-danger {
+    background-color: #dc3545;
+    border-color: #b02a37;
 } 
