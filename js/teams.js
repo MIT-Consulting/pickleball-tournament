@@ -19,11 +19,14 @@ class TeamManager {
     }
 
     addTeam(player1, player2, seed) {
+        const highestSeed = this.teams.reduce((max, team) => 
+            Math.max(max, team.seed), 0);
+
         const team = {
             id: Date.now(),
             player1,
             player2,
-            seed: seed || this.teams.length + 1
+            seed: seed || highestSeed + 1
         };
         this.teams.push(team);
         this.teams.sort((a, b) => a.seed - b.seed);
