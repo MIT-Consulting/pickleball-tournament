@@ -49,12 +49,47 @@ class TeamManager {
         this.teams.forEach(team => {
             const li = document.createElement('li');
             li.className = 'list-group-item d-flex justify-content-between align-items-center';
+            li.dataset.teamId = team.id;
             li.innerHTML = `
-                ${team.player1} & ${team.player2} (Seed: ${team.seed})
+                <div class="d-flex align-items-center">
+                    <span class="drag-handle me-2">⋮⋮</span>
+                    <span>${team.player1} & ${team.player2} (Seed: ${team.seed})</span>
+                </div>
                 <button class="btn btn-danger btn-sm remove-team" data-team-id="${team.id}">Remove</button>
             `;
             teamsList.appendChild(li);
         });
+
+        // Initialize Sortable
+        if (!this.sortable) {
+            this.sortable = new Sortable(teamsList, {
+                handle: '.drag-handle',
+                animation: 150,
+                onEnd: (evt) => {
+                    this.updateSeeds();
+                }
+            });
+        }
+    }
+
+    updateSeeds() {
+        const teamsList = document.getElementById('teams-list');
+        const items = teamsList.getElementsByTagName('li');
+        
+        // Create new array with updated order
+        const reorderedTeams = Array.from(items).map((item, index) => {
+            const teamId = parseInt(item.dataset.teamId);
+            const team = this.teams.find(t => t.id === teamId);
+            return {
+                ...team,
+                seed: index + 1
+            };
+        });
+
+        // Update teams array and save
+        this.teams = reorderedTeams;
+        this.saveTeams();
+        this.updateTeamsList();
     }
 
     updateStartButton() {

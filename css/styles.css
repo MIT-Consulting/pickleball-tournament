@@ -56,4 +56,16 @@
 #teams-list {
     max-height: 300px;
     overflow-y: auto;
+}
+
+.drag-handle {
+    cursor: move;
+    color: #666;
+    font-weight: bold;
+    user-select: none;
+}
+
+.sortable-ghost {
+    opacity: 0.4;
+    background-color: #c8ebfb;
 } 
