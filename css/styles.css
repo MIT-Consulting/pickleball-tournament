@@ -53,10 +53,6 @@
     width: 20px;
 }
 
-#teams-list {
-    overflow-y: auto;
-}
-
 .drag-handle {
     cursor: move;
     user-select: none;
